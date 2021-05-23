@@ -15,6 +15,8 @@ include($$PWD/libs/QCA/qca.pri)
 SOURCES += \
     src/cluster.cpp \
     src/consumer.cpp \
+    src/cursor.cpp \
+    src/function.cpp \
     src/main.cpp \
     src/mainwindow.cpp \
     src/message.cpp \
@@ -26,9 +28,13 @@ SOURCES += \
     src/topic.cpp
 
 HEADERS += \
+    src/basefunction.h \
     src/cluster.h \
     src/constants.h \
     src/consumer.h \
+    src/cursor.h \
+    src/function.h \
+    src/functioninstance.h \
     src/mainwindow.h \
     src/message.h \
     src/namespace.h \
