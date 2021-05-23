@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,12 +17,16 @@ SOURCES += \
     src/consumer.cpp \
     src/cursor.cpp \
     src/function.cpp \
+    src/httpclient.cpp \
     src/main.cpp \
     src/mainwindow.cpp \
     src/message.cpp \
     src/namespace.cpp \
     src/producer.cpp \
     src/pulsarmessage.cpp \
+    src/qjsonwebtoken.cpp \
+    src/qmulticombobox.cpp \
+    src/role.cpp \
     src/subscription.cpp \
     src/tenant.cpp \
     src/topic.cpp
@@ -35,11 +39,15 @@ HEADERS += \
     src/cursor.h \
     src/function.h \
     src/functioninstance.h \
+    src/httpclient.h \
     src/mainwindow.h \
     src/message.h \
     src/namespace.h \
     src/producer.h \
     src/pulsarmessage.h \
+    src/qjsonwebtoken.h \
+    src/qmulticombobox.h \
+    src/role.h \
     src/subscription.h \
     src/tenant.h \
     src/topic.h
