@@ -14,13 +14,29 @@ include($$PWD/libs/QCA/qca.pri)
 
 SOURCES += \
     src/cluster.cpp \
+    src/consumer.cpp \
     src/main.cpp \
-    src/mainwindow.cpp
+    src/mainwindow.cpp \
+    src/message.cpp \
+    src/namespace.cpp \
+    src/producer.cpp \
+    src/pulsarmessage.cpp \
+    src/subscription.cpp \
+    src/tenant.cpp \
+    src/topic.cpp
 
 HEADERS += \
     src/cluster.h \
     src/constants.h \
-    src/mainwindow.h
+    src/consumer.h \
+    src/mainwindow.h \
+    src/message.h \
+    src/namespace.h \
+    src/producer.h \
+    src/pulsarmessage.h \
+    src/subscription.h \
+    src/tenant.h \
+    src/topic.h
 
 DESTDIR = $$PWD/build
 

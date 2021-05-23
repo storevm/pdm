@@ -13,7 +13,6 @@ public:
     };
 
     explicit Cluster();
-
     Cluster(const Cluster& _other) { *this = _other; }
     Cluster& operator=(const Cluster& _other);
     bool operator==(const Cluster& _other) const;
