@@ -1,0 +1,11 @@
+prefix=/Users/tanxiangqing/tools/library/qca-2.3.2/build/dist
+exec_prefix=/Users/tanxiangqing/tools/library/qca-2.3.2/build/dist
+libdir=/Users/tanxiangqing/tools/library/qca-2.3.2/build/dist/lib
+includedir=/Users/tanxiangqing/tools/library/qca-2.3.2/build/dist/lib/qca.framework/Headers
+
+Name: QCA
+Description: Qt Cryptographic Architecture library
+Version: 2.3.2
+Requires: Qt5Core
+Libs: -F${libdir} -framework qca
+Cflags: -F${libdir} -I${includedir}
