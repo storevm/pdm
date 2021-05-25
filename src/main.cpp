@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "widgets/mainwindow.h"
 
 #include <QApplication>
 #include <QDir>
@@ -17,7 +17,8 @@ int main(int argc, char* argv[])
     Q_INIT_RESOURCE(resources);
 
 #if(QT_VERSION >=QT_VERSION_CHECK(5, 6, 0))
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    QGuiApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 #endif
 
     QApplication a(argc, argv);
@@ -89,7 +90,8 @@ int main(int argc, char* argv[])
     QCoreApplication::setOrganizationName(ORGANIZATION_NAME);
     QCoreApplication::setApplicationVersion(APPLICATION_VERSION);
 
-    MainWindow w;
-    w.show();
+    MainWindow window;
+    window.initialize();
+    window.show();
     return a.exec();
 }

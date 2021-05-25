@@ -1,43 +1,16 @@
 <RCC>
     <qresource prefix="/">
-        <file>images/expandall.ico</file>
-        <file>images/newtenant.ico</file>
-        <file>images/collapseall.ico</file>
-        <file>images/refresh.ico</file>
-        <file>images/pulsar.ico</file>
-        <file>images/tenant.ico</file>
-        <file>images/namespace.ico</file>
-        <file>images/topic.ico</file>
-        <file>images/addnew.ico</file>
-        <file>images/close.ico</file>
-        <file>images/delete.ico</file>
-        <file>images/message.ico</file>
-        <file>images/storage.ico</file>
-        <file>images/query.ico</file>
-        <file>images/copy.ico</file>
-        <file>images/exit.ico</file>
-        <file>images/start.ico</file>
-        <file>images/stop.ico</file>
-        <file>images/configure.ico</file>
-        <file>images/update.ico</file>
-        <file>images/sources.ico</file>
-        <file>images/function.ico</file>
-        <file>images/sink.ico</file>
-        <file>images/cancel.ico</file>
-        <file>images/instance.ico</file>
-        <file>images/ok.ico</file>
-        <file>images/folder.ico</file>
-        <file>images/permission.ico</file>
-        <file>images/token.ico</file>
-        <file>images/action.ico</file>
-        <file>images/role.ico</file>
-        <file>images/key.ico</file>
-        <file>images/grant.ico</file>
-        <file>images/newcluster.ico</file>
-        <file>images/cluster.ico</file>
-        <file>images/connect.ico</file>
-        <file>images/disconnect.ico</file>
-        <file>images/overview.ico</file>
-        <file>images/subscription.ico</file>
+        <file alias="collapseall">icons/collapseall.png</file>
+        <file alias="expandall">icons/expandall.png</file>
+        <file alias="newtenant">icons/newtenant.png</file>
+        <file alias="refresh">icons/refresh.png</file>
+        <file alias="connected">icons/connected.png</file>
+        <file alias="disconnected">icons/disconnected.png</file>
+        <file alias="tenant">icons/tenant.png</file>
+        <file alias="remove">icons/remvoe.png</file>
+        <file alias="addnew">icons/addnew.png</file>
+        <file alias="namespace">icons/namespace.png</file>
+        <file alias="pulsar">icons/pulsar.png</file>
+        <file alias="modify">icons/modify.png</file>
     </qresource>
 </RCC>

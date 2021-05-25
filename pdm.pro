@@ -19,7 +19,6 @@ SOURCES += \
     src/function.cpp \
     src/httpclient.cpp \
     src/main.cpp \
-    src/mainwindow.cpp \
     src/message.cpp \
     src/namespace.cpp \
     src/producer.cpp \
@@ -27,9 +26,18 @@ SOURCES += \
     src/qjsonwebtoken.cpp \
     src/qmulticombobox.cpp \
     src/role.cpp \
+    src/services/baseservice.cpp \
+    src/services/clusterservice.cpp \
+    src/services/namespaceservice.cpp \
+    src/services/tenantservice.cpp \
+    src/sink.cpp \
+    src/source.cpp \
     src/subscription.cpp \
+    src/table.cpp \
     src/tenant.cpp \
-    src/topic.cpp
+    src/topic.cpp \
+    src/widgets/mainwindow.cpp \
+    src/widgets/newclusterwindow.cpp
 
 HEADERS += \
     src/basefunction.h \
@@ -40,7 +48,6 @@ HEADERS += \
     src/function.h \
     src/functioninstance.h \
     src/httpclient.h \
-    src/mainwindow.h \
     src/message.h \
     src/namespace.h \
     src/producer.h \
@@ -48,9 +55,18 @@ HEADERS += \
     src/qjsonwebtoken.h \
     src/qmulticombobox.h \
     src/role.h \
+    src/services/baseservice.h \
+    src/services/clusterservice.h \
+    src/services/namespaceservice.h \
+    src/services/tenantservice.h \
+    src/sink.h \
+    src/source.h \
     src/subscription.h \
+    src/table.h \
     src/tenant.h \
-    src/topic.h
+    src/topic.h \
+    src/widgets/mainwindow.h \
+    src/widgets/newclusterwindow.h
 
 DESTDIR = $$PWD/build
 
@@ -61,3 +77,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     src/resources.qrc
+
+unix:macx { # OSX
+    TARGET = "PDM"
+    ICON = $$PWD/src/icons/logo.icns
+}

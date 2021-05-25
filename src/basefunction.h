@@ -3,14 +3,13 @@
 
 #include <QString>
 #include <QMap>
-#include <QVariantMap>
 #include <QJsonDocument>
 #include <QJsonArray>
 #include <QJsonObject>
 
 #include "namespace.h"
 
-typedef QMap<QString, QString> QFunctionConfig;
+typedef QMap<QString, QString> FunctionConfig;
 
 class BaseFunction
 {
@@ -34,11 +33,11 @@ public:
     inline int parallelism() const { return this->m_Parallelism; }
     inline void setParallelism(const int& _parallelism) {this->m_Parallelism = _parallelism; }
 
-    inline QFunctionConfig config() const { return this->m_Config; }
-    inline void setConfig(const QFunctionConfig& _config) { this->m_Config = _config; }
+    inline FunctionConfig config() const { return this->m_Config; }
+    inline void setConfig(const FunctionConfig& _config) { this->m_Config = _config; }
 
     void addConfig(const QString& _key, const QString& _value);
-    QVariantMap& createRoot(QVariantMap& _root) const;
+    QJsonObject& createRoot(QJsonObject& _root) const;
     virtual QByteArray toJson() const = 0;
     virtual void appendInfo(const QByteArray& _json);
 
@@ -48,7 +47,7 @@ private:
     int m_InstanceNum;
     int m_RunningNum;
     int m_Parallelism;
-    QFunctionConfig m_Config;
+    FunctionConfig m_Config;
 };
 
 inline BaseFunction::BaseFunction() : m_InstanceNum(-1), m_RunningNum(-1), m_Parallelism(-1) {}
@@ -76,7 +75,7 @@ inline void BaseFunction::addConfig(const QString& _key, const QString& _value)
     this->m_Config.insert(_key, _value);
 }
 
-inline QVariantMap& BaseFunction::createRoot(QVariantMap& _root) const
+inline QJsonObject& BaseFunction::createRoot(QJsonObject& _root) const
 {
     _root["tenant"] = this->getNamespace().tenant().name();
     _root["namespace"] = this->getNamespace().name();
